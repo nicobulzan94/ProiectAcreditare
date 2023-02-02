@@ -3,7 +3,7 @@ package org.fasttrackit.pages;
 import net.serenitybdd.core.pages.WebElementFacade;
 import org.openqa.selenium.support.FindBy;
 
-public class AccountPage extends BasePage {
+public class AccountLoginPage extends BasePage {
 
     @FindBy(css = ".u-column1.col-1 h2")
     private WebElementFacade logInTitle;
@@ -12,7 +12,7 @@ public class AccountPage extends BasePage {
     private WebElementFacade loginButton;
 
     @FindBy(css = ".woocommerce-error")
-    private WebElementFacade loginEmailErrorMsg;
+    private WebElementFacade loginErrorMsg;
 
     @FindBy(id = "username")
     private WebElementFacade emailField;
@@ -23,6 +23,10 @@ public class AccountPage extends BasePage {
     @FindBy(css = ".woocommerce-MyAccount-content strong:first-child")
     private WebElementFacade userNameTextElement;
 
+    @FindBy(id = "rememberme")
+    private WebElementFacade rememberMeCheckbox;
+
+
     public void logInTitleIsVisible() {
         logInTitle.isVisible();
     }
@@ -31,8 +35,8 @@ public class AccountPage extends BasePage {
         clickOn(loginButton);
     }
 
-    public String getLoginEmailErrorMsg() {
-        return loginEmailErrorMsg.getText();
+    public String getLoginErrorMsg() {
+        return loginErrorMsg.getText();
     }
 
     public void setEmailField(String value) {
@@ -46,6 +50,19 @@ public class AccountPage extends BasePage {
     public String userIsLoggedIn(){
         return userNameTextElement.getText();
     }
+
+    public void clickRememberCheckbox() {
+        clickOn(rememberMeCheckbox);
+    }
+
+
+
+
+
+
+
+
+
 
 
 

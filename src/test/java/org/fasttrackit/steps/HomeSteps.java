@@ -10,4 +10,14 @@ public class HomeSteps extends BaseSteps {
         homePage.clickOnLogInOrRegLink();
     }
 
+
+
+
+
+
+
+
+
+
+
 }

@@ -2,10 +2,12 @@ package org.fasttrackit.features;
 
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Managed;
+import net.thucydides.core.annotations.Step;
 import net.thucydides.core.annotations.Steps;
 import org.fasttrackit.steps.AccountSteps;
 import org.fasttrackit.steps.HomeSteps;
 import org.fasttrackit.steps.LoginSteps;
+import org.fasttrackit.steps.RegisterSteps;
 import org.fasttrackit.utils.Constants;
 import org.junit.Before;
 import org.junit.runner.RunWith;
@@ -23,6 +25,8 @@ public class BaseTest {
     protected LoginSteps loginSteps;
     @Steps
     protected AccountSteps accountSteps;
+    @Steps
+    protected RegisterSteps registerSteps;
 
     @Before
     public void initTests(){
