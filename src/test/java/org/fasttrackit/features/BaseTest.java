@@ -4,10 +4,7 @@ import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.annotations.Steps;
-import org.fasttrackit.steps.AccountSteps;
-import org.fasttrackit.steps.HomeSteps;
-import org.fasttrackit.steps.LoginSteps;
-import org.fasttrackit.steps.RegisterSteps;
+import org.fasttrackit.steps.*;
 import org.fasttrackit.utils.Constants;
 import org.junit.Before;
 import org.junit.runner.RunWith;
@@ -27,6 +24,11 @@ public class BaseTest {
     protected AccountSteps accountSteps;
     @Steps
     protected RegisterSteps registerSteps;
+    @Steps
+    protected BlogSteps blogSteps;
+    @Steps
+    protected CommSubmissionFailSteps commSubmissionFailSteps;
+
 
     @Before
     public void initTests(){

@@ -37,7 +37,7 @@ public class RegisterSteps extends BaseSteps {
 
     @Step
     public void verifyPassStrengthMsgIsDisplayed() {
-        regPage.getPasswordStrengthErrMsg();
+        regPage.passwordStrengthErrMsgIsDisplayed();
     }
 
     @Step
@@ -50,6 +50,13 @@ public class RegisterSteps extends BaseSteps {
         homePage.clickOnLogInOrRegLink();
         verifyRegisterTileIsVisible();
     }
+
+    @Step
+    public void verifyIfThePassIsInTheListOfPassStrengthTexts() {
+        Assert.assertTrue("The password strength text is not in the expected list.",regPage.listOfPassStrengthTexts());
+    }
+
+
 
 
 

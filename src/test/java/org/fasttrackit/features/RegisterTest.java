@@ -28,7 +28,7 @@ public class RegisterTest extends BaseTest {
         registerSteps.getToAccountRegisterPage();
         registerSteps.typeRegistrationEmail("nico@yopmail.com");
         registerSteps.typeRegistrationPass("123");
-        registerSteps.verifyPassStrengthMsgIsDisplayed();
+        registerSteps.verifyIfThePassIsInTheListOfPassStrengthTexts();
     }
 
     @Test
@@ -49,6 +49,8 @@ public class RegisterTest extends BaseTest {
         accountSteps.userIsLoggedIn("Test04");
 
     }
+
+
 
 
 
