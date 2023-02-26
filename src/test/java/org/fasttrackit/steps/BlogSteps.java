@@ -2,7 +2,6 @@ package org.fasttrackit.steps;
 
 import net.thucydides.core.annotations.Step;
 import org.junit.Assert;
-import org.openqa.selenium.remote.server.handler.interactions.touch.Scroll;
 
 public class BlogSteps extends BaseSteps {
 

@@ -2,7 +2,6 @@ package org.fasttrackit.features;
 
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Managed;
-import net.thucydides.core.annotations.Step;
 import net.thucydides.core.annotations.Steps;
 import org.fasttrackit.steps.*;
 import org.fasttrackit.utils.Constants;
@@ -28,6 +27,16 @@ public class BaseTest {
     protected BlogSteps blogSteps;
     @Steps
     protected CommSubmissionFailSteps commSubmissionFailSteps;
+    @Steps
+    protected SearchResultsSteps searchResultsSteps;
+    @Steps
+    protected ShopSteps shopSteps;
+    @Steps
+    protected CartSteps cartSteps;
+    @Steps
+    protected ProductDetailSteps productDetailSteps;
+    @Steps
+    protected CheckoutSteps checkoutSteps;
 
 
     @Before

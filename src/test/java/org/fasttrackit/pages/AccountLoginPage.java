@@ -47,7 +47,7 @@ public class AccountLoginPage extends BasePage {
         typeInto(passwordField, value);
     }
 
-    public String userIsLoggedIn(){
+    public String getUserNameTextElement(){
         return userNameTextElement.getText();
     }
 

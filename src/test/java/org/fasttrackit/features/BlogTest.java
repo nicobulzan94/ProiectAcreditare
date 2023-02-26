@@ -5,7 +5,7 @@ import org.junit.Test;
 public class BlogTest extends BaseTest {
 
     @Test
-    public void postWithEmptyFields() {
+    public void postWithEmptyFieldsTest() {
         blogSteps.navigateToBlogPage();
         blogSteps.clickOnPostCommentButton();
         commSubmissionFailSteps.errMsgFillRequiredFields();
@@ -13,7 +13,7 @@ public class BlogTest extends BaseTest {
     }
 
     @Test
-    public void postWithInvalidEmail() {
+    public void postWithInvalidEmailTest() {
         blogSteps.navigateToBlogPage();
         blogSteps.typeName("Ana");
         blogSteps.typeEmail("1@");
@@ -23,7 +23,7 @@ public class BlogTest extends BaseTest {
     }
 
     @Test
-    public void postWithoutComment() {
+    public void postWithoutCommentTest() {
         blogSteps.navigateToBlogPage();
         blogSteps.typeName("Ana");
         blogSteps.typeEmail("test@test.com");
@@ -33,9 +33,9 @@ public class BlogTest extends BaseTest {
     }
 
     @Test
-    public void postCommentSuccessfully() {
+    public void postCommentSuccessfullyTest() {
         blogSteps.navigateToBlogPage();
-        blogSteps.typeComment("This is good.");
+        blogSteps.typeComment("I like FastTrackIT.");
         blogSteps.typeName("Ana");
         blogSteps.typeEmail("test@test.com");
         blogSteps.clickOnPostCommentButton();
@@ -44,7 +44,7 @@ public class BlogTest extends BaseTest {
     }
 
     @Test
-    public void postDuplicateComment() {
+    public void postDuplicateCommentTest() {
         blogSteps.navigateToBlogPage();
         blogSteps.typeComment("The products on this site are very good.");
         blogSteps.typeName("Ana");

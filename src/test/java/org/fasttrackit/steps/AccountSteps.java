@@ -7,7 +7,7 @@ public class AccountSteps extends BaseSteps {
 
     @Step
     public void userIsLoggedIn(String userName) {
-        Assert.assertEquals(userName, accountPage.userIsLoggedIn());
+        Assert.assertEquals(userName, accountPage.getUserNameTextElement());
     }
 
 

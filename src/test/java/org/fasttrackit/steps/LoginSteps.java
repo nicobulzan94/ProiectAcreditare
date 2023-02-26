@@ -50,6 +50,14 @@ public class LoginSteps extends BaseSteps {
         verifyLogInTileIsVisible();
     }
 
+    @Step
+    public void doLogin(String email, String password) {
+        getToAccountLoginPage();
+        typeUserEmail(email);
+        typePassword(password);
+        clickLoginButton();
+    }
+
 
 
 

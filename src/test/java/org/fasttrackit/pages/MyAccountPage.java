@@ -9,7 +9,7 @@ public class MyAccountPage extends BasePage {
     private WebElementFacade userNameTextElement;
 
 
-    public String userIsLoggedIn(){
+    public String getUserNameTextElement(){
         return userNameTextElement.getText();
     }
 

@@ -6,7 +6,7 @@ import org.junit.Test;
 public class LoginTest extends BaseTest {
 
     @Test
-    public void loginWithEmptyFields() {
+    public void loginWithEmptyFieldsTest() {
         homeSteps.clickOnLogInOrRegLink();
         loginSteps.verifyLogInTileIsVisible();
         loginSteps.clickLoginButton();
@@ -14,7 +14,7 @@ public class LoginTest extends BaseTest {
     }
 
     @Test
-    public void loginWithInvalidEmail() {
+    public void loginWithInvalidEmailTest() {
         loginSteps.getToAccountLoginPage();
         loginSteps.typeUserEmail("nico@yopmail.com");
         loginSteps.typePassword(Constants.USER_PASS);
@@ -23,7 +23,7 @@ public class LoginTest extends BaseTest {
     }
 
     @Test
-    public void loginWithInvalidPassword() {
+    public void loginWithInvalidPasswordTest() {
         loginSteps.getToAccountLoginPage();
         loginSteps.typeUserEmail(Constants.USER_EMAIL);
         loginSteps.typePassword("123");
@@ -32,7 +32,7 @@ public class LoginTest extends BaseTest {
     }
 
     @Test
-    public void validLoginTest() {
+    public void validLoginTestTest() {
         loginSteps.getToAccountLoginPage();
         loginSteps.typeUserEmail(Constants.USER_EMAIL);
         loginSteps.typePassword(Constants.USER_PASS);

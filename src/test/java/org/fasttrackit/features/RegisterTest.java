@@ -7,7 +7,7 @@ public class RegisterTest extends BaseTest {
 
 
     @Test
-    public void registerWithEmptyFields() {
+    public void registerWithEmptyFieldsTest() {
         homeSteps.clickOnLogInOrRegLink();
         registerSteps.verifyRegisterTileIsVisible();
         registerSteps.clickOnRegisterButton();
@@ -15,7 +15,7 @@ public class RegisterTest extends BaseTest {
     }
 
     @Test
-    public void registerWithEmptyPasswordField() {
+    public void registerWithEmptyPasswordFieldTest() {
         registerSteps.getToAccountRegisterPage();
         registerSteps.typeRegistrationEmail("nico@yopmail.com");
         registerSteps.clickOnRegisterButton();
@@ -24,7 +24,7 @@ public class RegisterTest extends BaseTest {
     }
 
     @Test
-    public void registerWithInvalidPassword() {
+    public void registerWithInvalidPasswordTest() {
         registerSteps.getToAccountRegisterPage();
         registerSteps.typeRegistrationEmail("nico@yopmail.com");
         registerSteps.typeRegistrationPass("123");
@@ -32,7 +32,7 @@ public class RegisterTest extends BaseTest {
     }
 
     @Test
-    public void registerWithExistingEmail() {
+    public void registerWithExistingEmailTest() {
         registerSteps.getToAccountRegisterPage();
         registerSteps.typeRegistrationEmail(Constants.USER_EMAIL);
         registerSteps.typeRegistrationPass(Constants.USER_PASS);
@@ -41,12 +41,12 @@ public class RegisterTest extends BaseTest {
     }
 
     @Test
-    public void registerSuccessfully() {
+    public void registerSuccessfullyTest() {
         registerSteps.getToAccountRegisterPage();
-        registerSteps.typeRegistrationEmail("Test04@yopmail.com");
+        registerSteps.typeRegistrationEmail("Test05@yopmail.com");
         registerSteps.typeRegistrationPass(Constants.USER_PASS);
         registerSteps.clickOnRegisterButton();
-        accountSteps.userIsLoggedIn("Test04");
+        accountSteps.userIsLoggedIn("Test05");
 
     }
 
